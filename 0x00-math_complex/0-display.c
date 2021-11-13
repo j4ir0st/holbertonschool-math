@@ -25,7 +25,14 @@ void display_complex_number(complex c)
 	}
 	else if (c.re == 0)
 	{
-		printf("%.9gi\n", c.im);
+		if (sgn == '+')
+		{
+			printf("%.9gi\n", c.im);
+		}
+		else
+		{
+			printf("%c %.9gi\n", sgn, c.im);
+		}
 	}
 	else
 	{
