@@ -21,18 +21,11 @@ void display_complex_number(complex c)
 	}
 	if (c.im == 0)
 	{
-		printf("%.9g\n", c.re);
+		(c.re > 0) ? printf("%.9g\n", c.re) : printf("- %.9g\n", c.re);
 	}
 	else if (c.re == 0)
 	{
-		if (sgn == '+')
-		{
-			printf("%.9gi\n", c.im);
-		}
-		else
-		{
-			printf("%c %.9gi\n", sgn, c.im);
-		}
+		(sgn == '+') ? printf("%.9gi\n", c.im) : printf("%c %.9gi\n", sgn, c.im);
 	}
 	else
 	{
