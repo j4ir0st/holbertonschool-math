@@ -1,0 +1,1 @@
+applying math to coding
