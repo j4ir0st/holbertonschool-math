@@ -23,6 +23,7 @@ double _abs(double n)
 t_cell *heron(double p, double x0)
 {
 	t_cell *new, *tmp, *head;
+	double _error;
 
 	new = malloc(sizeof(t_cell));
 	if (new == NULL)
@@ -30,13 +31,14 @@ t_cell *heron(double p, double x0)
 		return (NULL);
 	}
 	new->elt = x0;
-	x0 = (0.5) * (x0 + (p / x0));
 	new->next = NULL;
 	head = new;
-	if (_abs((x0 * x0) - p) <= 0.0000001)
+	_error = _abs((x0 * x0) - p);
+	if (_error <= 0.0000001)
 	{
 		return (head);
 	}
+	x0 = (0.5) * (x0 + (p / x0));
 	head = heron(p, x0);
 	tmp = head;
 	while (tmp->next)
