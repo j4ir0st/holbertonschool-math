@@ -33,7 +33,7 @@ t_cell *heron(double p, double x0)
 	x0 = (0.5) * (x0 + (p / x0));
 	new->next = NULL;
 	head = new;
-	if (_abs(x0 - sqrt(p)) <= 0.0000001)
+	if (_abs((x0 * x0) - p) <= 0.0000001)
 	{
 		return (head);
 	}

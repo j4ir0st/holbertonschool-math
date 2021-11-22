@@ -9,8 +9,7 @@
 
 /**
  * struct list_s - singly linked list
- * @str: string - (malloc'ed string)
- * @len: length of the string
+ * @elt: int
  * @next: points to the next node
  *
  * Description: singly linked list node structure
@@ -23,14 +22,14 @@ typedef struct list_s
 } t_cell;
 
 t_cell *heron(double p, double x0);
-t_cell *Fibonnaci(); double gold_number(t_cell *head);
+t_cell *Fibonnaci();
+double gold_number(t_cell *head);
 
 /**
  * _putchar - writes the character c to stdout
  * @c: The character to print
  *
  * Return: On success 1.
- * On error, -1 is returned, and error is set appropriately.
  */
 
 int _putchar(char c);
@@ -74,7 +73,7 @@ int print_sign(int n);
 
 /**
  * _abs - computer absolute value of integer
- * @int: integer
+ * @n: integer
  * Return: absolute value
  */
 
