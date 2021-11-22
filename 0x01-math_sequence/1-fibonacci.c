@@ -1,9 +1,9 @@
 #include "fibonacci.h"
 
 /**
- * main - check the code for Holberton School students.
+ * Fibonnaci - creates a linked list with fibonnaci serie
  *
- * Return: Always 0.
+ * Return: Always head
  */
 
 t_cell *Fibonnaci()
@@ -29,9 +29,16 @@ t_cell *Fibonnaci()
 	return (head);
 }
 
+/**
+ * gold_number - find the golden number of a fibonnaci serie
+ * @head: beginning of the linked list
+ * Return: Always head
+ */
+
 double gold_number(t_cell *head)
 {
 	double A, B;
+
 	head = Fibonnaci();
 	A = head->elt;
 	head = head->next;
